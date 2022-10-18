@@ -1,0 +1,22 @@
+uuid: 6b5d6fae-6196-4569-8b85-b7ee291e0160
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - test_drupal
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: test_drupal_local_tasks
+theme: test_drupal
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Onglets
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

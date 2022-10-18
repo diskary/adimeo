@@ -12,30 +12,33 @@ dependencies:
     - field.field.node.event.field_string_long
     - node.type.event
   module:
-    - text
+    - image
     - user
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
+  field_image:
+    type: image
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 0
     region: content
-  links:
-    weight: 100
+  field_string_long:
+    type: basic_string
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
+  body: true
   field_date_end: true
   field_date_start: true
   field_event_type: true
-  field_image: true
-  field_string_long: true
   langcode: true
+  links: true
