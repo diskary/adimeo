@@ -5,3 +5,11 @@ main:
       assets/css/test_drupal.css: {}
   js:
     assets/js/test_drupal.js: {}
+
+event_style:
+  css:
+    theme:
+      assets/css/event-teaser.css: {}
+
+  js:
+    assets/js/event-teaser.js: {}
