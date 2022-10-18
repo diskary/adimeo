@@ -1,0 +1,22 @@
+uuid: e940dcfc-9892-46cd-b4f8-825962f5f76e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - test_drupal
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: test_drupal_powered
+theme: test_drupal
+region: header
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
