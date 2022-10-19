@@ -7,5 +7,6 @@ toolbar_items:
   - devel.route_info.item
   - devel.entity_info_page
   - devel.run_cron
+  - devel.phpinfo
   - devel.admin_settings_link
   - devel.route_info

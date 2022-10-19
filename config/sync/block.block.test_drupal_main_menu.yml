@@ -13,7 +13,7 @@ _core:
 id: test_drupal_main_menu
 theme: test_drupal
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:
