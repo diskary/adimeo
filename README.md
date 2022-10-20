@@ -15,5 +15,6 @@ A la racine du projet, vous trouverez la nouvelle base de donnée **test_result_
 
 J'ai modifié les accès du user admin et les nouveaux accès sont les suivants:
 
-#####login: admin
-#####password: admin
+login: admin
+
+password: admin
