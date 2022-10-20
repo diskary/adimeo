@@ -1,0 +1,33 @@
+<?php
+
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+
+/**
+ * Implement hook_cron.
+ */
+function agenda_cron() {
+  $currentDate = new \DateTime('now');
+  $loggerFactory = Drupal::logger('unpublish');
+
+  /** @var \Drupal\Core\Entity\EntityStorageInterface $nodeManager */
+  try {
+    $nodeManager = \Drupal::entityTypeManager()->getStorage('node');
+
+    $query = $nodeManager->getQuery()->condition('type', 'event')
+      ->condition('field_date_end', $currentDate->format(DATE_ATOM), '<')
+      ->condition('status', 0) ->execute();
+
+    if (!$query) return;
+
+    foreach ($query as $item) {
+      \Drupal::queue('agenda_event_unpublish')->createItem($item);
+    }
+  }
+  catch (InvalidPluginDefinitionException $e) {
+    $loggerFactory->error($e->getMessage());
+  }
+  catch (PluginNotFoundException $e) {
+    $loggerFactory->error($e->getMessage());
+  }
+}

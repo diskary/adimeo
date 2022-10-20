@@ -1,0 +1,33 @@
+uuid: eb08e34e-5603-4a74-8fa9-b4e1e8e8792a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - agenda
+    - node
+    - system
+  theme:
+    - test_drupal
+id: eventblock
+theme: test_drupal
+region: content
+weight: 0
+provider: null
+plugin: c_event_block
+settings:
+  id: c_event_block
+  label: 'Event Block'
+  label_display: '0'
+  provider: agenda
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

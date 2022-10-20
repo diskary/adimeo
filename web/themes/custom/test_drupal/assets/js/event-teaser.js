@@ -2,7 +2,7 @@
 
   $('document').ready(() => {
 
-    const colorButtons = $("[data-toggle-event-color]");
+    const colorButtons = $(".t-background-color");
 
     colorButtons.each((item, button) => {
       const tag = $(button);
@@ -11,6 +11,5 @@
       });
     });
   });
-
 
 })(jQuery);
