@@ -1,7 +1,10 @@
 (function($){
   $(document).ready(() => {
+
     $('#block-eventblock').hide();
-    $('[data-test]').on("click", () => {
+
+    $('#r-event').on("click", () => {
+
       $('#block-eventblock').dialog({
         resizable: false,
         height: "auto",

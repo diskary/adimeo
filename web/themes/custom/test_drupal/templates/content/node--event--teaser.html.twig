@@ -77,7 +77,6 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{{ attach_library('classy/node') }}
 {{ attach_library('test_drupal/event_style') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -103,6 +102,6 @@
     {{ content }}
   </div>
 
-  <button data-toggle-event-color>Toggle color</button>
+  <button class="t-background-color">{% trans %}Change Background color{% endtrans %}</button>
 
 </article>
